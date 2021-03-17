@@ -1,3 +1,5 @@
+const { shell } = require("electron");
+
 class Bookmarks {
   constructor() {
     this.errorNotification = document.querySelector('#error_notification');
@@ -21,6 +23,8 @@ class Bookmarks {
     this.formCreateBookmark.addEventListener('submit', this.CreateBookmark.bind(this));
 
     this.destroyBookmarks.addEventListener('click', this.destroyBookmarkList.bind(this));
+
+    this.bookmarkList.addEventListener('click', this.openLink.bind(this));
   }
 
   CreateBookmark(event) {
@@ -81,6 +85,13 @@ class Bookmarks {
     localStorage.clear();
 
     this.bookmarkList.innerHTML = null;
+  }
+
+  openLink(event) {
+    if (event.target.href) {
+      event.preventDefault();
+      shell.openExternal(event.target.href);
+    }
   }
 }
 

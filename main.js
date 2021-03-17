@@ -2,7 +2,11 @@ const { app, BrowserWindow } = require('electron');
 
 function createMainWindow() {
   let mainWindow = new BrowserWindow({
-    title: 'Electron Bookmarks'
+    title: 'Electron Bookmarks',
+    webPreferences: {
+      nodeIntegration: true,
+      contextIsolation: false
+    },
   });
 
   mainWindow.loadFile('index.html');
