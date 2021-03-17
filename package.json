@@ -1,22 +1,22 @@
 {
   "name": "ElectronBookmarks",
   "version": "1.0.0",
-  "description": "",
+  "description": "Electron js bookmarks app tutorial",
   "main": "main.js",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "electron": "^12.0.1"
   },
-  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "electron ."
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/afurourrego/ElectronBookmarks.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "afuro.com.co",
+  "license": "",
   "bugs": {
     "url": "https://github.com/afurourrego/ElectronBookmarks/issues"
   },
